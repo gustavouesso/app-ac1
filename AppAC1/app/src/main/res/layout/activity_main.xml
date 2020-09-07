@@ -9,10 +9,69 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:text="Calculo do IMC"
+        android:textColor="#4CAF50"
+        android:textStyle="bold"
+        android:textSize="30sp"
+        android:layout_marginTop="150dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:id="@+id/welcome"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/user_name"
+        android:hint="Seu nome aqui"
+        android:textSize="30sp"
+        android:inputType="textPersonName"
+        />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/user_name"
+        android:layout_marginBottom="150dp"
+        android:id="@+id/user_height"
+        android:hint="Sua altura"
+        android:textSize="30sp"
+        android:inputType="text|numberDecimal"
+        />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/user_height"
+        android:layout_marginBottom="100dp"
+        android:id="@+id/user_weight"
+        android:hint="Seu peso"
+        android:textSize="30sp"
+        android:inputType="text|numberDecimal"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="50dp"
+        android:layout_marginRight="50dp"
+        android:onClick="imcCalc"
+        android:text="Calcular!"
+        android:textSize="20sp"
+        android:id="@+id/bt_01"
+        app:layout_constraintTop_toBottomOf="@id/user_weight"
+        />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
